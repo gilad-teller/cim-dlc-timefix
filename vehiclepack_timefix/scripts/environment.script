@@ -1,0 +1,44 @@
+$newdates = map[ "x01-bus01", [mkdate(1,1,1962), mkdate(31,12,9999)], 
+		"x01-tram01", [mkdate(1,1,1953), mkdate(31,12,9999)],
+		"x01-metro01", [mkdate(1,1,1920), mkdate(31,12,9999)],
+		"x01-waterbus01", [mkdate(1,1,1920), mkdate(31,12,9999)],
+		"x01-heli01", [mkdate(1,1,1959), mkdate(31,12,9999)],
+
+		"x02-bus01", [mkdate(1,1,1973), mkdate(31,12,9999)],
+		"x02-bus02", [mkdate(1,1,2006), mkdate(31,12,9999)],
+		"x02-tram01", [mkdate(1,1,2015), mkdate(31,12,9999)],
+		"x02-metro01", [mkdate(1,1,1976), mkdate(31,12,9999)],
+		"x02-heli01", [mkdate(1,1,1957), mkdate(31,12,9999)],
+
+		"x03-bus01", [mkdate(1,1,1995), mkdate(31,12,9999)],
+		"x03-tram01", [mkdate(1,1,1988), mkdate(31,12,9999)],
+		"x03-metro01", [mkdate(1,1,1965), mkdate(31,12,9999)],
+		"x03-waterbus01", [mkdate(1,1,1996), mkdate(31,12,9999)],
+		"x03-heli01", [mkdate(1,1,1968), mkdate(31,12,9999)],
+
+		"x05-bus01", [mkdate(1,1,1967), mkdate(31,12,9999)],
+		"x05-tram01", [mkdate(1,1,2001), mkdate(31,12,9999)],
+		"x05-metro01", [mkdate(1,1,1972), mkdate(31,12,9999)],
+		"x05-metro02", [mkdate(1,1,1998), mkdate(31,12,9999)],
+		"x05-heli01", [mkdate(1,1,1967), mkdate(31,12,9999)],
+
+		"xparis-tram02", [mkdate(1,1,1985), mkdate(31,12,9999)],
+		"xparis-metro01", [mkdate(1,1,1967), mkdate(31,12,9999)],
+
+		"trolley-06", [mkdate(1,1,1981), mkdate(31,12,9999)],
+		"trolley-04", [mkdate(1,1,1959), mkdate(31,12,9999)],
+		"trolley-05", [mkdate(1,1,1971), mkdate(31,12,9999)],
+		"xstpetersburg-metro01", [mkdate(1,1,2002), mkdate(31,12,9999)],
+		
+		"a-metro01", [mkdate(1,1,1998), mkdate(31,12,9999)],
+		"a-bus01", [mkdate(1,1,1968), mkdate(31,12,9999)],
+		"a-bus02", [mkdate(1,1,1968), mkdate(31,12,9999)]
+		 ];
+
+foreach(MAIN.$level.$playerVehicles) {
+$vehiclename = current[0];
+if (defined $newdates[$vehiclename]) {
+current[1] = $newdates[$vehiclename][0];
+current[2] = $newdates[$vehiclename][1];
+}
+}
