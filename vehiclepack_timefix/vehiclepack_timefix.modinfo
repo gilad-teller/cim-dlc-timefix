@@ -1,0 +1,8 @@
+$mod = map [
+	"version", [7,0],
+	"name", "MOD DLC time fix",
+	"description", "This mod will fix all the DLC vehicle appearence time.",
+	"installto", 2,
+	"author", "giladteller",
+	"homepage", "http://citiesinmotion.wikispaces.com/DLC+time+fix"
+];
